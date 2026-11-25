@@ -1,0 +1,187 @@
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+/* HEADER TITLE */
+
+.header-title h2 {
+  font-size: 23px;
+  color: #202b45;
+  margin: 0;
+}
+
+.header-title p {
+  color: #929bad;
+  font-size: 13px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* HEADER ACTIONS */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+/* LANGUAGE */
+
+.language-select {
+  background: #fff;
+  border: 1px solid #e9edf4;
+  border-radius: 9px;
+  padding: 10px 13px;
+  color: #667085;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* OWNER PROFILE */
+
+.owner-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.owner-avatar {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: #f07832;
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.owner-info strong,
+.owner-info span {
+  display: block;
+}
+
+.owner-info strong {
+  font-size: 13px;
+  color: #202b45;
+}
+
+.owner-info span {
+  color: #929bad;
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+/* LOGOUT BUTTON */
+
+.logout-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #e53935;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.logout-button:hover {
+  background: #c62828;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .header {
+    gap: 10px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-title h2 {
+    font-size: 21px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .header-title {
+    width: 100%;
+  }
+
+  .header-title h2 {
+    font-size: 20px;
+  }
+
+  .header-title p {
+    font-size: 12px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .language-select {
+    display: block;
+    max-width: 140px;
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .owner-info strong {
+    font-size: 12px;
+  }
+
+  .owner-info span {
+    font-size: 10px;
+  }
+
+  .logout-button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+  .header-title h2 {
+    font-size: 18px;
+  }
+
+  .owner-avatar {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+}

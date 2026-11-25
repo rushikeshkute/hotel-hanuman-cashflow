@@ -1,0 +1,223 @@
+
+.reports-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.reports-header h2 {
+  margin: 0 0 7px;
+  color: #202b40;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.reports-header p {
+  margin: 0;
+  color: #8791a3;
+  font-size: 13px;
+}
+
+.reports-header select {
+  min-width: 150px;
+  padding: 11px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+.reports-header select:focus {
+  border-color: #5275df;
+  box-shadow: 0 0 0 3px rgba(82, 117, 223, 0.10);
+}
+
+.reports-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 24px;
+}
+
+.report-card,
+.reports-table-card {
+  min-width: 0;
+  background: #ffffff;
+  padding: 22px;
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(32, 43, 69, 0.04);
+}
+
+.report-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(32, 43, 69, 0.08);
+}
+
+.report-card span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.report-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 14px 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.report-card p {
+  color: #94a3b8;
+  font-size: 11px;
+  margin: 0;
+}
+
+.sales-report h2,
+.report-sales {
+  color: #16a36a;
+}
+
+.expenses-report h2,
+.report-expenses {
+  color: #f97316;
+}
+
+.profit-report h2,
+.report-profit {
+  color: #5275df;
+}
+
+.udhar-report h2 {
+  color: #a855f7;
+}
+
+.reports-table-card {
+  margin-bottom: 22px;
+}
+
+.reports-table-card h3 {
+  margin: 0 0 20px;
+  color: #263248;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.reports-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reports-table {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+}
+
+.reports-table th {
+  color: #64748b;
+  background: #f8fafc;
+  font-weight: 700;
+}
+
+.reports-table td {
+  color: #475569;
+}
+
+.reports-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.reports-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reports-table .report-sales,
+.reports-table .report-expenses,
+.reports-table .report-profit {
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .reports-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+}
+
+@media (max-width: 750px) {
+  .reports-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reports-header h2 {
+    font-size: 21px;
+  }
+
+  .reports-header select {
+    width: 100%;
+  }
+
+  .report-card,
+  .reports-table-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .report-card h2 {
+    font-size: 21px;
+  }
+
+  .reports-table-card h3 {
+    font-size: 16px;
+  }
+
+  .reports-table th,
+  .reports-table td {
+    padding: 13px 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .reports-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .report-card {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .report-card {
+    transition: none;
+  }
+}

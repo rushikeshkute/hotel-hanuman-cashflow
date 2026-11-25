@@ -1,0 +1,257 @@
+
+.udhar-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.udhar-header {
+  margin-bottom: 24px;
+}
+
+.udhar-header h2 {
+  margin: 0 0 7px;
+  color: #202b40;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.udhar-header p {
+  margin: 0;
+  color: #8791a3;
+  font-size: 13px;
+}
+
+.udhar-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.udhar-card,
+.udhar-form-card,
+.udhar-table-card {
+  min-width: 0;
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(32, 43, 69, 0.04);
+}
+
+.udhar-card span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.udhar-card h2 {
+  color: #8b5cf6;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 14px 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.udhar-card p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 0;
+}
+
+.udhar-form-card {
+  margin-bottom: 24px;
+}
+
+.udhar-form-card h3,
+.udhar-table-card h3 {
+  margin: 0 0 22px;
+  color: #263248;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.udhar-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.udhar-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.udhar-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.udhar-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #263248;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.udhar-field input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.10);
+}
+
+.udhar-field input::placeholder {
+  color: #a0aaba;
+}
+
+.udhar-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.udhar-submit-btn {
+  margin-top: 24px;
+  padding: 13px 24px;
+  background: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.udhar-submit-btn:hover {
+  background: #7744e8;
+  transform: translateY(-2px);
+}
+
+.udhar-submit-btn:focus-visible {
+  outline: 3px solid rgba(139, 92, 246, 0.25);
+  outline-offset: 3px;
+}
+
+.udhar-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.udhar-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.udhar-table th,
+.udhar-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+}
+
+.udhar-table th {
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.udhar-table td {
+  color: #475569;
+}
+
+.udhar-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.udhar-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.udhar-table .paid {
+  color: #16a36a;
+  font-weight: 700;
+}
+
+.udhar-table .pending {
+  color: #e87927;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .udhar-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .udhar-header h2 {
+    font-size: 21px;
+  }
+
+  .udhar-card,
+  .udhar-form-card,
+  .udhar-table-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .udhar-card h2 {
+    font-size: 23px;
+  }
+
+  .udhar-form-card h3,
+  .udhar-table-card h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+
+  .udhar-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .udhar-field.full-width {
+    grid-column: auto;
+  }
+
+  .udhar-submit-btn {
+    width: 100%;
+  }
+
+  .udhar-table th,
+  .udhar-table td {
+    padding: 13px 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .udhar-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .udhar-card {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .udhar-submit-btn,
+  .udhar-field input {
+    transition: none;
+  }
+}

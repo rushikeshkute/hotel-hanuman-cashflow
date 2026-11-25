@@ -1,0 +1,197 @@
+
+.cashbook-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.cashbook-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.cashbook-header h2 {
+  margin: 0 0 7px;
+  color: #202b40;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cashbook-header p {
+  margin: 0;
+  color: #8791a3;
+  font-size: 13px;
+}
+
+.cashbook-header input {
+  padding: 11px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 13px;
+  outline: none;
+}
+
+.cashbook-header input:focus {
+  border-color: #5275df;
+  box-shadow: 0 0 0 3px rgba(82, 117, 223, 0.10);
+}
+
+.cashbook-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.cashbook-card,
+.cashbook-table-card {
+  min-width: 0;
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(32, 43, 69, 0.04);
+}
+
+.cashbook-card span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cashbook-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 14px 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.cashbook-card p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 0;
+}
+
+.income-card h2,
+.cashbook-table .income {
+  color: #16a36a;
+}
+
+.expense-card h2,
+.cashbook-table .expense {
+  color: #f97316;
+}
+
+.balance-card h2 {
+  color: #5275df;
+}
+
+.cashbook-table-card h3 {
+  margin: 0 0 20px;
+  color: #263248;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cashbook-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cashbook-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cashbook-table th,
+.cashbook-table td {
+  padding: 15px 14px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 13px;
+}
+
+.cashbook-table th {
+  color: #64748b;
+  background: #f8fafc;
+  font-weight: 700;
+}
+
+.cashbook-table td {
+  color: #475569;
+}
+
+.cashbook-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.cashbook-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cashbook-table td.income,
+.cashbook-table td.expense {
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .cashbook-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .cashbook-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .cashbook-header h2 {
+    font-size: 21px;
+  }
+
+  .cashbook-header input {
+    width: 100%;
+  }
+
+  .cashbook-card,
+  .cashbook-table-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .cashbook-card h2 {
+    font-size: 23px;
+  }
+
+  .cashbook-table-card h3 {
+    font-size: 16px;
+  }
+
+  .cashbook-table th,
+  .cashbook-table td {
+    padding: 13px 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .cashbook-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .cashbook-card {
+    padding: 16px;
+  }
+}

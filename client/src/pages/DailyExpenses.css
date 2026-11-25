@@ -1,0 +1,227 @@
+
+.expenses-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.expenses-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.expenses-page-header h2 {
+  margin: 0 0 7px;
+  color: #202b40;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.expenses-page-header p {
+  margin: 0;
+  color: #8791a3;
+  font-size: 13px;
+}
+
+.expenses-page-header > span {
+  color: #64748b;
+  font-size: 12px;
+  background: #ffffff;
+  border: 1px solid #edf0f5;
+  padding: 10px 14px;
+  border-radius: 9px;
+  white-space: nowrap;
+}
+
+.expenses-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.expense-summary-card,
+.expense-form-card {
+  min-width: 0;
+  background: #ffffff;
+  padding: 24px;
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(32, 43, 69, 0.04);
+}
+
+.expense-summary-card span {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.expense-summary-card h2 {
+  color: #f97316;
+  font-size: 29px;
+  font-weight: 700;
+  margin: 14px 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.expense-summary-card p {
+  color: #94a3b8;
+  font-size: 12px;
+  margin: 0;
+}
+
+.expense-form-card h3 {
+  margin: 0 0 24px;
+  color: #263248;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.expense-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.expense-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.expense-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.expense-field input,
+.expense-field select,
+.expense-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #263248;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expense-field textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+
+.expense-field input:focus,
+.expense-field select:focus,
+.expense-field textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.10);
+}
+
+.expense-field input::placeholder,
+.expense-field textarea::placeholder {
+  color: #a0aaba;
+}
+
+.expense-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.expense-submit-btn {
+  margin-top: 24px;
+  padding: 13px 24px;
+  background: #f97316;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.expense-submit-btn:hover {
+  background: #e7630c;
+  transform: translateY(-2px);
+}
+
+.expense-submit-btn:focus-visible {
+  outline: 3px solid rgba(249, 115, 22, 0.25);
+  outline-offset: 3px;
+}
+
+@media (max-width: 750px) {
+  .expenses-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .expenses-page-header h2 {
+    font-size: 21px;
+  }
+
+  .expenses-summary {
+    gap: 12px;
+  }
+
+  .expense-summary-card,
+  .expense-form-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .expense-summary-card h2 {
+    font-size: 23px;
+  }
+
+  .expense-form-card h3 {
+    font-size: 16px;
+    margin-bottom: 19px;
+  }
+
+  .expense-form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .expense-field.full-width {
+    grid-column: auto;
+  }
+
+  .expense-submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .expenses-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-summary-card {
+    padding: 16px;
+  }
+
+  .expenses-page-header > span {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expense-submit-btn,
+  .expense-field input,
+  .expense-field select,
+  .expense-field textarea {
+    transition: none;
+  }
+}

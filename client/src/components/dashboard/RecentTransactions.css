@@ -1,0 +1,183 @@
+
+.transactions-panel {
+  width: 100%;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 3px 12px rgba(32, 43, 69, 0.03);
+}
+
+.transactions-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+
+.transactions-heading h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #202b45;
+  margin: 0;
+}
+
+.transactions-heading p {
+  color: #929bad;
+  font-size: 12px;
+  margin: 6px 0 0;
+}
+
+.view-all-btn {
+  border: none;
+  background: transparent;
+  color: #f07832;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 8px;
+  border-radius: 7px;
+}
+
+.view-all-btn:hover {
+  background: #fff3eb;
+}
+
+.view-all-btn:focus-visible {
+  outline: 2px solid #f07832;
+  outline-offset: 2px;
+}
+
+.transaction-list {
+  margin-top: 20px;
+}
+
+.transaction-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.transaction-row:last-child {
+  border-bottom: none;
+}
+
+.transaction-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  font-size: 19px;
+}
+
+.transaction-icon.income {
+  background: #e9f8ef;
+}
+
+.transaction-icon.expense {
+  background: #fff1e6;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-info strong,
+.transaction-info small {
+  display: block;
+}
+
+.transaction-info strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #202b45;
+  overflow-wrap: anywhere;
+}
+
+.transaction-info small {
+  font-size: 11px;
+  color: #929bad;
+  margin-top: 5px;
+}
+
+.transaction-amount {
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.transaction-amount.income {
+  color: #16a56a;
+}
+
+.transaction-amount.expense {
+  color: #e78339;
+}
+
+@media (max-width: 750px) {
+  .transactions-panel {
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .transactions-heading h3 {
+    font-size: 16px;
+  }
+
+  .transactions-heading p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .transaction-list {
+    margin-top: 14px;
+  }
+
+  .transaction-row {
+    gap: 10px;
+    padding: 13px 0;
+  }
+
+  .transaction-icon {
+    width: 39px;
+    height: 39px;
+    font-size: 17px;
+  }
+
+  .transaction-info strong {
+    font-size: 12px;
+  }
+
+  .transaction-info small {
+    font-size: 10px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .transaction-amount {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .transactions-panel {
+    padding: 14px;
+  }
+
+  .transaction-row {
+    gap: 8px;
+  }
+
+  .transaction-amount {
+    font-size: 10px;
+  }
+}
+  

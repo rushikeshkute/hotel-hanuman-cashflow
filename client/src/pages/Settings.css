@@ -1,0 +1,193 @@
+
+.settings-page {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+}
+
+.settings-header {
+  margin-bottom: 25px;
+}
+
+.settings-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px;
+}
+
+.settings-header p {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 0;
+}
+
+.settings-card {
+  width: 100%;
+  max-width: 850px;
+  min-width: 0;
+  background: #ffffff;
+  padding: 28px;
+  border: 1px solid #edf0f5;
+  border-radius: 16px;
+  box-shadow: 0 3px 12px rgba(32, 43, 69, 0.04);
+}
+
+.settings-card h3 {
+  color: #1f4e38;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 24px;
+}
+
+.settings-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.settings-form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.settings-form-group input,
+.settings-form-group textarea,
+.settings-form-group select {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: #263248;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-form-group input::placeholder,
+.settings-form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.settings-form-group input:focus,
+.settings-form-group textarea:focus,
+.settings-form-group select:focus {
+  border-color: #1f4e38;
+  box-shadow: 0 0 0 3px rgba(31, 78, 56, 0.10);
+}
+
+.settings-form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.5;
+}
+
+.settings-save-btn {
+  width: fit-content;
+  min-width: 180px;
+  background: #1f4e38;
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.settings-save-btn:hover {
+  background: #2e7d32;
+  transform: translateY(-2px);
+}
+
+.settings-save-btn:focus-visible {
+  outline: 3px solid rgba(31, 78, 56, 0.20);
+  outline-offset: 3px;
+}
+
+.settings-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.settings-error,
+.settings-success {
+  width: 100%;
+  max-width: 850px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+.settings-success {
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+
+@media (max-width: 750px) {
+  .settings-header h2 {
+    font-size: 21px;
+  }
+
+  .settings-card {
+    padding: 20px;
+    border-radius: 13px;
+  }
+
+  .settings-card h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .settings-card form {
+    gap: 17px;
+  }
+
+  .settings-save-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .settings-card {
+    padding: 16px;
+  }
+
+  .settings-form-group input,
+  .settings-form-group textarea,
+  .settings-form-group select {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-save-btn,
+  .settings-form-group input,
+  .settings-form-group textarea,
+  .settings-form-group select {
+    transition: none;
+  }
+}
