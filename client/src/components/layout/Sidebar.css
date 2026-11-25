@@ -14,6 +14,7 @@
   border-right: 1px solid #e9edf4;
   flex-shrink: 0;
   overflow-y: auto;
+  z-index: 1000;
 }
 
 /* BRAND */
@@ -121,6 +122,18 @@
   margin-top: 20px;
 }
 
+/* HAMBURGER BUTTON */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+/* OVERLAY */
+
+.sidebar-overlay {
+  display: none;
+}
+
 /* TABLET */
 
 @media (max-width: 1024px) {
@@ -139,7 +152,50 @@
 /* MOBILE */
 
 @media (max-width: 750px) {
+  .mobile-menu-btn {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    background: #f07832;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
   .sidebar {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    min-width: 270px;
+    height: 100dvh;
+    padding: 75px 18px 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: none;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
   }
 }
